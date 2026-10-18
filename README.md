@@ -1,1 +1,1 @@
-# Pathway-Assistant
+# pathway-assistant
