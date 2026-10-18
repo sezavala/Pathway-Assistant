@@ -1,0 +1,5 @@
+# Never commit secrets (your keys live in .env.local)
+.env*
+
+# Mac Finder metadata
+.DS_Store
