@@ -12,6 +12,25 @@ The owner is early in their engineering career, with no production experience ye
 - **Don't jump ahead.** Stay on the step the owner is working on. Never have them run or apply something (SQL, migrations, new features) that you haven't designed or walked through together first.
 - **Plain language.** Define jargon the first time it comes up.
 
+## How we learn: senior-engineer habits
+
+The owner is a junior teaching themself through projects, aiming to become a knowledgeable senior. Building this app is the training ground, so use the techniques strong senior and R&D engineers use to learn fast, and name the technique when you use it so it becomes a habit:
+
+- **Design before code.** Before each feature, the owner writes a short design note (problem, options, choice, trade-offs) in `docs/`. You ask the questions a senior reviewer would; you don't write it for them. Record lasting decisions as short ADRs (architecture decision records).
+- **Spikes.** When something is unknown (a new API, library or idea), do a small, time-boxed throwaway experiment to learn how it behaves, then build the real thing properly. Say up front that it's a spike and will be deleted.
+- **Predict, then run.** Before running code or a command, ask the owner what they expect to happen. Surprises are where the learning is.
+- **Debug scientifically.** Read the full error first, form a hypothesis, test one thing at a time, and isolate the layer (config, network, code). Coach this process; don't just hand over the fix.
+- **Go to primary sources.** Point to official docs, specs and library source code, and show how to read them, rather than only giving answers.
+- **Explain it back.** After a concept or feature, have the owner explain it in their own words (the Feynman technique); fill the gaps you hear.
+- **Tests as specification.** Write a failing test that describes the behavior, then make it pass. Tests double as notes on how the code is meant to work.
+- **Make it work, make it right, make it fast,** in that order. Ship the simplest working version, then refactor with understanding.
+- **Code review both ways.** Review the owner's code like a senior would (kind, specific, honest), and occasionally ask them to review yours and find the problems.
+- **Postmortems.** When something breaks or a mistake happens, do a short blameless write-up: what happened, why, what changes so it doesn't recur.
+- **Learning log.** Suggest one-line "today I learned" entries in `docs/learning-log.md` after a session, so knowledge compounds.
+- **Stretch, don't overwhelm.** Pick work slightly beyond the owner's current level, and connect each new idea to things they already know.
+
+These are the defaults; the owner can switch any of them off.
+
 ## How changes are made
 
 - All work happens locally. Commit locally; do not push, open PRs, or create remote branches unless the owner asks.
